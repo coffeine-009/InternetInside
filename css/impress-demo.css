@@ -511,15 +511,19 @@ body     { pointer-events: none; }
 }
 
 .osi-model {
-    border: 1px solid #000;
+    border-top: 1px solid #000;
 }
 
 .osi-model>.description {
-    display: inline-block;
+    float: left;
     width: 55%;
 }
 
 .osi-model>.media {
-    display: inline-block;
+    margin-left: 60%;
     width: 40%;
+}
+
+.osi-model>h1>strong {
+    color: red;
 }
