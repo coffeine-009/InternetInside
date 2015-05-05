@@ -1,50 +1,6 @@
 <!doctype html>
 
 <!--
-
-    Welcome to the light side of the source, young padawan.
-
-    One step closer to learn something interesting you are...
-
-                               ____                  
-                            _.' :  `._               
-                        .-.'`.  ;   .'`.-.           
-               __      / : ___\ ;  /___ ; \      __  
-             ,'_ ""--.:__;".-.";: :".-.":__;.--"" _`,
-             :' `.t""--.. '<@.`;_  ',@:` ..--""j.' `;
-                  `:-.._J '-.-'L__ `-- ' L_..-;'     
-                    "-.__ ;  .-"  "-.  : __.-"       
-                        L ' /.------.\ ' J           
-                         "-.   "--"   .-"            
-                        __.l"-:_JL_;-";.__           
-                     .-j/'.;  ;""""  / .'\"-.        
-                   .' /:`. "-.:     .-" .';  `.      
-                .-"  / ;  "-. "-..-" .-"  :    "-.   
-             .+"-.  : :      "-.__.-"      ;-._   \  
-             ; \  `.; ;                    : : "+. ; 
-             :  ;   ; ;                    : ;  : \: 
-             ;  :   ; :                    ;:   ;  : 
-            : \  ;  :  ;                  : ;  /  :: 
-            ;  ; :   ; :                  ;   :   ;: 
-            :  :  ;  :  ;                : :  ;  : ; 
-            ;\    :   ; :                ; ;     ; ; 
-            : `."-;   :  ;              :  ;    /  ; 
-             ;    -:   ; :              ;  : .-"   : 
-             :\     \  :  ;            : \.-"      : 
-              ;`.    \  ; :            ;.'_..--  / ; 
-              :  "-.  "-:  ;          :/."      .'  :
-               \         \ :          ;/  __        :
-                \       .-`.\        /t-""  ":-+.   :
-                 `.  .-"    `l    __/ /`. :  ; ; \  ;
-                   \   .-" .-"-.-"  .' .'j \  /   ;/ 
-                    \ / .-"   /.     .'.' ;_:'    ;  
-                     :-""-.`./-.'     /    `.___.'   
-                           \ `t  ._  /               
-                            "-.t-._:'                
-
--->
-
-<!--
     
     So you'd like to know how to use impress.js?
     
@@ -284,21 +240,122 @@
         </div>
     </div>
 
-
+    <!-- HTTP -->
     <div class="step slide" data-x="1000" data-y="-1500">
-        <q>Would you like to <strong>impress your audience</strong> with <strong>stunning visualization</strong> of your talk?</q>
+        <h1><strong>H</strong>yper <strong>T</strong>ext <strong>T</strong>ransfer <strong>P</strong>rotocol</h1>
+        <q>//TODO
+            <code>
+                GET /users HTTP/1.1<br />
+                Host: example.org<br />
+                Content-Type: text/html<br />
+            </code>
+        </q>
     </div>
 
-    <!--
-        
-        This is an example of step element being scaled.
-        
-        Again, we use a `data-` attribute, this time it's `data-scale="4"`, so it means that this
-        element will be 4 times larger than the others.
-        From presentation and transitions point of view it means, that it will have to be scaled
-        down (4 times) to make it back to it's correct size.
-        
-    -->
+    <!-- HTTP -->
+    <div class="step slide" data-x="2000" data-y="-1500">
+        <h1>HTTP</h1>
+        <q>//TODO
+            http://example.org:80/users
+            <code>
+                GET /users HTTP/1.1<br />
+                Host: example.org<br />
+                Content-Type: text/html
+            </code>
+        </q>
+    </div>
+
+
+    <!-- HTTP into OSI -->
+    <div
+        id = "osi-overview"
+        class = "step"
+        data-x = "2000"
+        data-y = "-4000"
+        data-scale = "2"
+    ></div>
+
+    <!-- PC1 -->
+    <div class = "step osi-1" data-x = "1200" data-y = "-4000" rotate = "0">
+        <h1>OSI</h1>
+        <q>
+            <code>http://example.org/users</code>
+        </q>
+    </div>
+    <!-- PC1 :: 7 -->
+    <div
+        class = "step osi-1"
+        data-x = "1200"
+        data-y = "-3700"
+        data-z = "-100"
+        data-rotate-x = "-45"
+    >
+        <h1>7. Application</h1>
+        <q>
+            <code>
+                GET /users HTTP/1.1<br />
+                Host: example.org<br />
+            </code>
+        </q>
+    </div>
+    <!-- PC1 :: 6 -->
+    <div
+        class = "step osi-1"
+        data-x = "1200"
+        data-y = "-3600"
+        data-z = "-350"
+        data-rotate-x = "-90"
+    >
+        <h1>6. Presentation</h1>
+        <q>None</q>
+    </div>
+    <!-- PC1 :: 5 -->
+    <div
+        class = "step osi-1"
+        data-x = "1200"
+        data-y = "-3700"
+        data-z = "-600"
+        data-rotate-x = "-135"
+    >
+        <h1>5. Session</h1>
+        <q>None</q>
+    </div>
+    <!-- PC1 :: 4 -->
+    <div
+        class = "step osi-1"
+        data-x = "1200"
+        data-y = "-4000"
+        data-z = "-800"
+        data-rotate-x = "-180"
+    >
+        <h1>4. Transport</h1>
+        <q>TODO</q>
+    </div>
+    <!-- PC1 :: 3 -->
+    <div
+        class = "step osi-1"
+        data-x = "1200"
+        data-y = "-4300"
+        data-z = "-600"
+        data-rotate-x = "-225"
+    >
+        <h1>3. Network</h1>
+        <q>TODO</q>
+    </div>
+
+
+    <div
+        id = "pc-1"
+        class = "step osi-1"
+        data-x = "1200"
+        data-y = "-4000"
+        data-z = "-850"
+    >
+        <h1>OK</h1>OK
+    </div>
+
+
+    <!--  -->
     <div id="title" class="step" data-x="0" data-y="0" data-scale="4">
         <span class="try">then you should try</span>
         <h1>impress.js<sup>*</sup></h1>
@@ -405,7 +462,7 @@
         CSS transfrom docs: https://developer.mozilla.org/en/CSS/transform
         
     -->
-    <div id="overview" class="step" data-x="3000" data-y="1500" data-scale="10">
+    <div id="overview" class="step" data-x="3000" data-y="1000" data-scale="14">
     </div>
 
 </div>

@@ -524,6 +524,16 @@ body     { pointer-events: none; }
     width: 40%;
 }
 
-.osi-model>h1>strong {
+h1>strong {
     color: red;
+}
+
+.osi-1 {
+    border: 1px solid #000;
+}
+
+#pc-1 {
+    background: #000;
+    height: 1000px;
+    width: 3000px;
 }
