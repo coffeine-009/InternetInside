@@ -72,6 +72,7 @@ body {
     background:         radial-gradient(rgb(240, 240, 240), rgb(190, 190, 190));
 
     background-repeat: no-repeat;
+    background-size: cover;
     background-attachment: fixed;
     background-position: center;
     background-image: url( ../images/background.jpg );
@@ -522,6 +523,8 @@ body     { pointer-events: none; }
 .osi-model>.media {
     margin-left: 60%;
     width: 40%;
+    max-height: 40%;
+    overflow-y: hidden;
 }
 
 h1>strong {
@@ -529,7 +532,7 @@ h1>strong {
 }
 
 .osi-1 {
-    border: 1px solid #000;
+    /*border: 1px solid #000;*/
 }
 
 /*#pc-1 {*/
