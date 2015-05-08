@@ -196,7 +196,7 @@
     <!-- HTTP -->
     <div class="step slide" data-x="1000" data-y="-1500">
         <h1><strong>H</strong>yper <strong>T</strong>ext <strong>T</strong>ransfer <strong>P</strong>rotocol</h1>
-        <q>//TODO
+        <q>
             <code>
                 GET /users HTTP/1.1<br />
                 Host: example.org<br />
@@ -209,13 +209,12 @@
     <div class="step slide" data-x="2000" data-y="-1500">
         <h1>HTTP</h1>
         <q>
-            <canvas
-                id = "network"
-                width = "1024"
-                height = "600"
-            >
-                No support
-            </canvas>
+            <code>
+                HTTP/1.0
+                GET POST HEAD<br />
+                HTTP/1.1 PUT DELETE OPTIONS TRACE CONNECT PATCH<br />
+                HTTP/2 <br />
+            </code>
         </q>
     </div>
 
@@ -582,41 +581,21 @@ if ("ontouchstart" in document.documentElement) {
     
 -->
 <script src="js/impress.js"></script>
+<script src="js/computer.js"></script>
 <script>
     impress().init();
 
         var drawingCanvas = document.getElementById('network');
         if(drawingCanvas && drawingCanvas.getContext) {
-            var context = drawingCanvas.getContext('2d');
-                // Рисуем окружность
-                context.strokeStyle = "#000";
-                context.fillStyle = "#fff";
-                context.beginPath();
-                context.rect(10, 10, 300, 450);
-                context.closePath();
-                context.stroke();
-                context.fill();
-                // Рисуем левый глаз
-                context.fillStyle = "#fff";
-                context.beginPath();
-                context.arc(84,90,8,0,Math.PI*2,true);
-                context.closePath();
-                context.stroke();
-                context.fill();
-                // Рисуем правый глаз
-                context.beginPath();
-                context.arc(116,90,8,0,Math.PI*2,true);
-                context.closePath();
-                context.stroke();
-                context.fill();
-                // Рисуем рот
-                context.beginPath();
-                context.moveTo(70,115);
-                context.quadraticCurveTo(100,130,130,115);
-                context.quadraticCurveTo(100,150,70,115);
-                context.closePath();
-                context.stroke();
-                context.fill();
+            var computerSrc = new Computer(
+                drawingCanvas.getContext('2d'),
+                {
+                    x: 5,
+                    y: 5
+                }
+            );
+            computerSrc.draw();
+
         }
 </script>
 

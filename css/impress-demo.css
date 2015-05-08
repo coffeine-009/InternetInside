@@ -540,3 +540,12 @@ h1>strong {
     /*height: 1000px;*/
     /*width: 3000px;*/
 /*}*/
+
+code {
+    font-family: courier, monospace;
+}
+
+.list-inline>li {
+    display: inline-block;
+    margin-left: 20px;
+}
