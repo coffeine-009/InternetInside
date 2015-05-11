@@ -1,0 +1,126 @@
+Accept 			Content-Types that are acceptable for the response. See Content negotiation.
+Accept-Charset 		Character sets that are acceptable
+Accept-Encoding 	List of acceptable encodings. See HTTP compression.
+Accept-Language 	List of acceptable human languages for response. See Content negotiation.
+Accept-Datetime 	Acceptable version in time
+Authorization 		Authentication credentials for HTTP authentication
+Cache-Control 		Used to specify directives that must be obeyed by all caching mechanisms along the request-response chain
+Connection 		Control options for the current connection and list of hop-by-hop request fields[8]
+Cookie 			An HTTP cookie previously sent by the server with Set-Cookie (below)
+Content-MD5 		A Base64-encoded binary MD5 sum of the content of the request body
+Content-Type 		The MIME type of the body of the request (used with POST and PUT requests)
+Date 			The date and time that the message was sent (in "HTTP-date" format as defined by RFC 7231 Date/Time Formats)
+Expect 			Indicates that particular server behaviors are required by the client
+From 			The email address of the user making the request
+If-Match 		Only perform the action if the client supplied entity matches the same entity on the server. This is mainly for methods like PUT to only update a 				resource if it has not been modified since the user last updated it.
+If-Modified-Since 	Allows a 304 Not Modified to be returned if content is unchanged
+If-None-Match 		Allows a 304 Not Modified to be returned if content is unchanged, see HTTP ETag
+If-Range 		If the entity is unchanged, send me the part(s) that I am missing; otherwise, send me the entire new entity
+If-Unmodified-Since 	Only send the response if the entity has not been modified since a specific time.
+Max-Forwards 		Limit the number of times the message can be forwarded through proxies or gateways.
+Origin 			Initiates a request for cross-origin resource sharing (asks server for an 'Access-Control-Allow-Origin' response field) .
+Pragma 			Implementation-specific fields that may have various effects anywhere along the request-response chain.
+Proxy-Authorization 	Authorization credentials for connecting to a proxy.
+Range 			Request only part of an entity. Bytes are numbered from 0. See Byte serving.
+Referer [sic] 		This is the address of the previous web page from which a link to the currently requested page was followed. (The word “referrer” has been misspelled 				in the RFC as well as in most implementations to the point that it has become standard usage and is considered correct terminology)
+Upgrade 		Ask the server to upgrade to another protocol. 	Upgrade: HTTP/2.0, SHTTP/1.3, IRC/6.9, RTA/x11 	Permanent
+Via 			Informs the server of proxies through which the request was sent. 	Via: 1.0 fred, 1.1 example.com (Apache/1.1)
+Warning 		A general warning about possible problems with the entity body. 	Warning: 199 Miscellaneous warning
+
+
+Response:
+Access-Control-Allow-Origin 	Specifying which web sites can participate in cross-origin resource sharing 	Access-Control-Allow-Origin: *
+Accept-Patch[28] 		Specifies which patch document formats this server supports 			Accept-Patch: text/example;charset=utf-8
+Accept-Ranges 			What partial content range types this server supports 				Accept-Ranges: bytes
+Age 				The age the object has been in a proxy cache in seconds
+Allow 				Valid actions for a specified resource. To be used for a 405 Method not allowed 	Allow: GET, HEAD
+Cache-Control 			Tells all caching mechanisms from server to client whether they may cache this object. It is measured in seconds
+Connection 			Control options for the current connection and list of hop-by-hop response fields[8]
+Content-Disposition[29] 	An opportunity to raise a "File Download" dialogue box for a known MIME type with binary format or suggest a filename for dynamic content. 					Quotes are necessary with special characters. 	Content-Disposition: attachment; filename="fname.ext"
+Content-Encoding 		The type of encoding used on the data. See HTTP compression.
+Content-Language 		The natural language or languages of the intended audience for the enclosed content[30]
+Content-Location 		An alternate location for the returned data 	Content-Location: /index.htm
+Content-MD5 			A Base64-encoded binary MD5 sum of the content of the response 	Content-MD5: Q2hlY2sgSW50ZWdyaXR5IQ== 	Permanent
+Content-Range 			Where in a full body message this partial message belongs 	Content-Range: bytes 21010-47021/47022 	Permanent
+Content-Type 			The MIME type of this content
+Date 				The date and time that the message was sent (in "HTTP-date" format as defined by RFC 7231) 	Date: Tue, 15 Nov 1994 08:12:31 GMT
+ETag 				An identifier for a specific version of a resource, often a message digest 	ETag: "737060cd8c284d8af7ad3082f209582d"
+Expires 			Gives the date/time after which the response is considered stale (in "HTTP-date" format as defined by RFC 7231) 	Expires: Thu, 01 Dec 					1994 16:00:00 GMT
+Last-Modified 			The last modified date for the requested object (in "HTTP-date" format as defined by RFC 7231) 	Last-Modified: Tue, 15 Nov 1994 12:45:26 GMT
+Link 				Used to express a typed relationship with another resource, where the relation type is defined by RFC 5988 	Link: </feed>; 					rel="alternate"[31]
+Location 			Used in redirection, or when a new resource has been created. 	Location: http://www.w3.org/pub/WWW/People.html
+P3P 				This field is supposed to set P3P policy, in the form of P3P:CP="your_compact_policy". However, P3P did not take off,[32] most browsers have 					never fully implemented it, a lot of websites set this field with fake policy text, that was enough to fool browsers the existence of P3P 					policy and grant permissions for third party cookies. 	P3P: CP="This is not a P3P policy! See http://www.google.com/support/accounts/bin/				answer.py?hl=en&answer=151657 for more info."
+Pragma 				Implementation-specific fields that may have various effects anywhere along the request-response chain. 	Pragma: no-cache
+Proxy-Authenticate 		Request authentication to access the proxy. 	Proxy-Authenticate: Basic
+Public-Key-Pins[33] 		HTTP Public Key Pinning, announces hash of website's authentic TLS certificate 	
+					Public-Key-Pins: max-age=2592000; pin-sha256="E9CZ9INDbd+2eRQozYqqbQ2yXLVKB9+xcprMF+44U1g=";
+Refresh 			Used in redirection, or when a new resource has been created. This refresh redirects after 5 seconds. 	
+				Refresh: 5; url=http://www.w3.org/pub/WWW/People.html 	Proprietary and non-standard: a header extension introduced by Netscape and supported 					by most web browsers.
+Retry-After 			If an entity is temporarily unavailable, this instructs the client to try again later. Value could be a specified period of time (in seconds) 					or a HTTP-date.[34] 	
+
+				    Example 1: Retry-After: 120
+				    Example 2: Retry-After: Fri, 07 Nov 2014 23:59:59 GMT
+
+Set-Cookie 			An HTTP cookie 	Set-Cookie: UserID=JohnDoe; Max-Age=3600; Version=1
+Strict-Transport-Security 	A HSTS Policy informing the HTTP client how long to cache the HTTPS only policy and whether this applies to subdomains. 	
+				Strict-Transport-Security: max-age=16070400; includeSubDomains
+Trailer 			The Trailer general field value indicates that the given set of header fields is present in the trailer of a message encoded with chunked 					transfer coding. 	Trailer: Max-Forwards
+Transfer-Encoding 		The form of encoding used to safely transfer the entity to the user. Currently defined methods are: chunked, compress, deflate, gzip, 					identity. 	Transfer-Encoding: chunked
+Upgrade 			Ask the client to upgrade to another protocol. 	Upgrade: HTTP/2.0, SHTTP/1.3, IRC/6.9, RTA/x11
+Vary 				Tells downstream proxies how to match future request headers to decide whether the cached response can be used rather than requesting a fresh 						one from the origin server. 	Vary: *
+Via 				Informs the client of proxies through which the response was sent. 	Via: 1.0 fred, 1.1 example.com (Apache/1.1)
+Warning 			A general warning about possible problems with the entity body. 	Warning: 199 Miscellaneous warning
+WWW-Authenticate 		Indicates the authentication scheme that should be used to access the requested entity. 	WWW-Authenticate: Basic
+
+
+What are the key differences to HTTP/1.x?
+
+At a high level, HTTP/2:
+
+    is binary, instead of textual
+    is fully multiplexed, instead of ordered and blocking
+    can therefore use one connection for parallelism
+    uses header compression to reduce overhead
+    allows servers to “push” responses proactively into client caches
+
+Why is HTTP/2 binary?
+
+Binary protocols are more efficient to parse, more compact “on the wire”, and most importantly, they are much less error-prone, compared to textual protocols like HTTP/1.x, because they often have a number of affordances to “help” with things like whitespace handling, capitalization, line endings, blank links and so on.
+
+For example, HTTP/1.1 defines four different ways to parse a message; in HTTP/2, there’s just one code path.
+
+It’s true that HTTP/2 isn’t usable through telnet, but we already have some tool support, such as a Wireshark plugin.
+Why is HTTP/2 multiplexed?
+
+HTTP/1.x has a problem called “head-of-line blocking,” where effectively only one request can be outstanding on a connection at a time.
+
+HTTP/1.1 tried to fix this with pipelining, but it didn’t completely address the problem (a large or slow response can still block others behind it). Additionally, pipelining has been found very difficult to deploy, because many intermediaries and servers don’t process it correctly.
+
+This forces clients to use a number of heuristics (often guessing) to determine what requests to put on which connection to the origin when; since it’s common for a page to load 10 times (or more) the number of available connections, this can severely impact performance, often resulting in a “waterfall” of blocked requests.
+
+Multiplexing addresses these problems by allowing multiple request and response messages to be in flight at the same time; it’s even possible to intermingle parts of one message with another on the wire.
+
+This, in turn, allows a client to use just one connection per origin to load a page.
+Why just one TCP connection?
+
+With HTTP/1, browsers open between four and eight connections per origin. Since many sites use multiple origins, this could mean that a single page load opens more than thirty connections.
+
+One application opening so many connections simultaneously breaks a lot of the assumptions that TCP was built upon; since each connection will start a flood of data in the response, there’s a real risk that buffers in the intervening network will overflow, causing a congestion event and retransmits.
+
+Additionally, using so many connections unfairly monopolizes network resources, “stealing” them from other, better-behaved applications (e.g., VoIP).
+What’s the benefit of Server Push?
+
+When a browser requests a page, the server sends the HTML in the response, and then needs to wait for the browser to parse the HTML and issue requests for all of the embedded assets before it can start sending the JavaScript, images and CSS.
+
+Server Push allows the server to avoid this round trip of delay by “pushing” the responses it thinks the client will need into its cache.
+Why do we need header compression?
+
+Patrick McManus from Mozilla showed this vividly by calculating the effect of headers for an average page load.
+
+If you assume that a page has about 80 assets (which is conservative in today’s Web), and each request has 1400 bytes of headers (again, not uncommon, thanks to Cookies, Referer, etc.), it takes at least 7-8 round trips to get the headers out “on the wire.” That’s not counting response time - that’s just to get them out of the client.
+
+This is because of TCP’s Slow Start mechanism, which paces packets out on new connections based on how many packets have been acknowledged – effectively limiting the number of packets that can be sent for the first few round trips.
+
+In comparison, even mild compression on headers allows those requests to get onto the wire within one roundtrip – perhaps even one packet.
+
+This overhead is considerable, especially when you consider the impact upon mobile clients, which typically see round-trip latency of several hundred milliseconds, even under good conditions.

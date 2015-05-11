@@ -82,10 +82,10 @@
     </div>
 
     <!-- OSI Model -->
-    <div class="step osi-model" data-y="-4000" data-z = "-100" rotate = "0" data-rotate-x="65">
+    <div id = "osi-model" class="step osi-model" data-y="-4000" data-z = "-100" rotate = "0" data-rotate-x="65">
         <h1><strong>O</strong>pen <strong>S</strong>ystems <strong>I</strong>nterconnection basic reference model</h1>
     </div>
-    <div class="step osi-model" data-x="0" data-y="-3740" rotate = "0">
+    <div id = "osi-7" class="step osi-model" data-x="0" data-y="-3740" rotate = "0">
         <h1>7. Application</h1>
         <div class = "description">
             <p>
@@ -100,7 +100,7 @@
             </figure>
         </div>
     </div>
-    <div class="step osi-model" data-x="0" data-y="-3350" rotate = "0">
+    <div id = "osi-6" class="step osi-model" data-x="0" data-y="-3350" rotate = "0">
         <h1>6. Presentation</h1>
         <div class = "description">
             <p>
@@ -115,7 +115,7 @@
             </figure>
         </div>
     </div>
-    <div class="step osi-model" data-x="0" data-y="-2960" rotate = "0">
+    <div id = "osi-5" class="step osi-model" data-x="0" data-y="-2960" rotate = "0">
         <h1>5. Session</h1>
         <div class = "description">
             <p>
@@ -130,7 +130,7 @@
             </figure>
         </div>
     </div>
-    <div class="step osi-model" data-x="0" data-y="-2570" rotate = "0">
+    <div id = "osi-4" class="step osi-model" data-x="0" data-y="-2570" rotate = "0">
         <h1>4. Transport</h1>
         <div class = "description">
             <p>
@@ -145,15 +145,19 @@
             </figure>
         </div>
     </div>
-    <div class="step osi-model" data-x="450" data-y="-2570" data-z = "-450" data-rotate-y = "90">
+    <div id = "osi-4-tls" class="step osi-model" data-x="450" data-y="-2570" data-z = "-450" data-rotate-y = "90">
         <h1>SSL/TLS</h1>
         <div class = "description">
-            ok<br>
-            ok<br>
-            ok<br>
+            Netscape(SSL)<br />
+            1.0 2.0 3.0
         </div>
+        <div class = "media">
+            IETF(TLS)<br />
+            1.0 1.1 1.2
+        </div>
+        TLS 1.2: RFC 5246
     </div>
-    <div class="step osi-model" data-x="0" data-y="-2180" rotate = "0">
+    <div id = "osi-3" class="step osi-model" data-x="0" data-y="-2180" rotate = "0">
         <h1>3. Network</h1>
         <div class = "description">
             <p>
@@ -168,7 +172,21 @@
             </figure>
         </div>
     </div>
-    <div class="step osi-model" data-x="0" data-y="-1760" rotate = "0">
+    <div id = "osi-3-icmp" class = "step osi-model" data-x = "450" data-y = "-2180" data-z = "-450" data-rotate-y = "90">
+        <h1>Internet Control Message Protocol</h1>
+        <div class = "description">
+            <code>
+                ping<br/>
+                traceroute<br />
+                host<br />
+                nslookup
+            </code>
+        </div>
+        <div class = "media">
+            <code>hping3 -1 IP --flood -e "MSG"</code>
+        </div>
+    </div>
+    <div id = "osi-2" class="step osi-model" data-x="0" data-y="-1760" rotate = "0">
         <h1>2. Data link</h1>
         <div class = "description">
             <p>
@@ -184,7 +202,7 @@
         </div>
     </div>
 
-    <div class="step osi-model" data-x="0" data-y="-1330">
+    <div id = "osi-1" class="step osi-model" data-x="0" data-y="-1330">
         <h1>1. Physical</h1>
         <div class = "description">
             <p>
@@ -202,8 +220,8 @@
     </div>
 
     <!-- HTTP -->
-    <div class="step slide" data-x="1000" data-y="-1500">
-        <h1><strong>H</strong>yper <strong>T</strong>ext <strong>T</strong>ransfer <strong>P</strong>rotocol</h1>
+    <div id = "http-intro" class="step slide" data-x="1000" data-y="-1500">
+        <h1><strong>H</strong>yper<strong>t</strong>ext <strong>T</strong>ransfer <strong>P</strong>rotocol</h1>
         <q>
             <code>
                 GET /users HTTP/1.1<br />
@@ -214,7 +232,7 @@
     </div>
 
     <!-- HTTP -->
-    <div class="step slide" data-x="2000" data-y="-1500">
+    <div id = "http-methods" class = "step slide" data-x = "2000" data-y = "-1500">
         <h1>HTTP</h1>
         <q>
             <code>
@@ -224,6 +242,95 @@
                 PUT DELETE OPTIONS TRACE CONNECT PATCH<br />
             </code>
         </q>
+    </div>
+
+    <!-- HTTP :: Main things -->
+    <div id = "title" class = "step" data-x = "0" data-y = "0" data-scale = "4">
+        <span class = "try">Headers</span>
+        <h1>METHODS</h1>
+        <span class = "footnote">Status Code</span>
+    </div>
+
+    <!-- HTTP :: Response -->
+    <div id = "its" class = "step" data-x = "850" data-y = "3000" data-rotate = "90" data-scale = "5">
+        <code>
+            HTTP/1.1 200 OK<br />
+            Content-Type: text/html charset=UTF-8<br />
+            Server: Apache/1.3.3.7 (Unix)  (Red-Hat/Linux)<br />
+            <br />
+            &lthtml>...
+        </code>
+    </div>
+
+    <!-- HTTP :: Performance -->
+    <div id="big" class="step" data-x="3500" data-y="2100" data-rotate="180" data-scale="6">
+        <p>HTTP and<b>big</b> <span class="thoughts">performance</span></p>
+    </div>
+
+    <!-- HTTP :: Performance :: Headers -->
+    <div id="tiny" class="step" data-x="2825" data-y="2325" data-z="-3000" data-rotate="300" data-scale="1">
+        <p><b>Correct headers</b></p>
+    </div>
+
+    <!-- HTTP :: Headers :: Request -->
+    <div id="ing" class="step" data-x="3500" data-y="-850" data-rotate="270" data-scale="6">
+        <p><b class="positioning">Content-Type</b> <b class="rotating">Accept</b> Host
+        <b class="scaling">Accept-Encoding</b> Accept-Language</p> <b>Authorization</b> Cache-Control Cookie
+    </div>
+
+    <!-- HTTP :: Headers :: Response -->
+    <div id="imagination" class="step" data-x="6700" data-y="-300" data-scale="6">
+        <p>Access-Control-Allow-Origin <b>Cache-Control</b> WWW-Authenticate <b class="imagination">Content-*</b><br />
+        Set-Cookie Allow</p>
+    </div>
+
+    <!-- HTTP/2 -->
+    <div id="http-2" class="step slide" data-x="6300" data-y="2000" data-rotate="20" data-scale="4">
+        <h1>HTTP/2</h1>
+        <q>
+            <ul>
+                <li>is binary</li>
+                <li>is fully multiplexed</li>
+                <li>can use one connection</li>
+                <li>uses header compression</li>
+                <li>allows servers to “push” responses proactively into client caches</li>
+            </ul>
+        </q>
+    </div>
+
+    <div id="restfull" class="step" data-x="6000" data-y="4000" data-scale="2">
+        <h1>RESTfull</h1>
+        <ul>
+            <li>Resource based</li>
+            <li>Representations</li>
+            <li>
+                Constraints:
+                    Uniform interface,
+                    Stateless,
+                    Client-Server,
+                    Cacheable,
+                    Layered system,
+                    Code of demand(optional)
+            </li>
+        </ul>
+    </div>
+
+    <!--
+
+        And the last one shows full power and flexibility of impress.js.
+
+        You can not only position element in 3D, but also rotate it around any axis.
+        So this one here will get rotated by -40 degrees (40 degrees anticlockwise) around X axis and
+        10 degrees (clockwise) around Y axis.
+
+        You can of course rotate it around Z axis with `data-rotate-z` - it has exactly the same effect
+        as `data-rotate` (these two are basically aliases).
+
+    -->
+    <div id="its-in-3d" class="step" data-x="6200" data-y="4600" data-z="-100" data-rotate-x="-40" data-rotate-y="10" data-scale="2">
+        <h1>Advantages</h1>
+        <p><span class="have">REST</span> <span class="you">based </span> <span class="in">on</span> <b>HTTP</b>?</p>
+        <span class="footnote">Any representation</span>
     </div>
 
 
@@ -414,110 +521,6 @@
                 Host: example.org<br />
             </code>
         </q>
-    </div>
-
-
-    <!--<div-->
-        <!--id = "pc-1"-->
-        <!--class = "step osi-1"-->
-        <!--data-x = "1200"-->
-        <!--data-y = "-4000"-->
-        <!--data-z = "-850"-->
-    <!-->-->
-        <!--<h1>OK</h1>OK-->
-    <!--</div>-->
-
-
-    <!--  -->
-    <div id="title" class="step" data-x="0" data-y="0" data-scale="4">
-        <span class="try">then you should try</span>
-        <h1>impress.js<sup>*</sup></h1>
-        <span class="footnote"><sup>*</sup> no rhyme intended</span>
-    </div>
-
-    <!--
-        
-        This element introduces rotation.
-        
-        Notation shouldn't be a surprise. We use `data-rotate="90"` attribute, meaning that this
-        element should be rotated by 90 degrees clockwise.
-        
-    -->
-    <div id="its" class="step" data-x="850" data-y="3000" data-rotate="90" data-scale="5">
-        <p>It's a <strong>presentation tool</strong> <br/>
-        inspired by the idea behind <a href="http://prezi.com">prezi.com</a> <br/>
-        and based on the <strong>power of CSS3 transforms and transitions</strong> in modern browsers.</p>
-    </div>
-
-    <div id="big" class="step" data-x="3500" data-y="2100" data-rotate="180" data-scale="6">
-        <p>visualize your <b>big</b> <span class="thoughts">thoughts</span></p>
-    </div>
-
-    <!--
-        
-        And now it gets really exiting! We move into third dimension!
-        
-        Along with `data-x` and `data-y`, you can define the position on third (Z) axis, with
-        `data-z`. In the example below we use `data-z="-3000"` meaning that element should be
-        positioned far away from us (by 3000px).
-        
-    -->
-    <div id="tiny" class="step" data-x="2825" data-y="2325" data-z="-3000" data-rotate="300" data-scale="1">
-        <p>and <b>tiny</b> ideas</p>
-    </div>
-
-    <!--
-        
-        This step here doesn't introduce anything new when it comes to data attributes, but you
-        should notice in the demo that some words of this text are being animated.
-        It's a very basic CSS transition that is applied to the elements when this step element is
-        reached.
-        
-        At the very beginning of the presentation all step elements are given the class of `future`.
-        It means that they haven't been visited yet.
-        
-        When the presentation moves to given step `future` is changed to `present` class name.
-        That's how animation on this step works - text moves when the step has `present` class.
-        
-        Finally when the step is left the `present` class is removed from the element and `past`
-        class is added.
-        
-        So basically every step element has one of three classes: `future`, `present` and `past`.
-        Only one current step has the `present` class.
-        
-    -->
-    <div id="ing" class="step" data-x="3500" data-y="-850" data-rotate="270" data-scale="6">
-        <p>by <b class="positioning">positioning</b>, <b class="rotating">rotating</b> and <b class="scaling">scaling</b> them on an infinite canvas</p>
-    </div>
-
-    <div id="imagination" class="step" data-x="6700" data-y="-300" data-scale="6">
-        <p>the only <b>limit</b> is your <b class="imagination">imagination</b></p>
-    </div>
-
-    <div id="source" class="step" data-x="6300" data-y="2000" data-rotate="20" data-scale="4">
-        <p>want to know more?</p>
-        <q><a href="http://github.com/bartaz/impress.js">use the source</a>, Luke!</q>
-    </div>
-
-    <div id="one-more-thing" class="step" data-x="6000" data-y="4000" data-scale="2">
-        <p>one more thing...</p>
-    </div>
-
-    <!--
-        
-        And the last one shows full power and flexibility of impress.js.
-        
-        You can not only position element in 3D, but also rotate it around any axis.
-        So this one here will get rotated by -40 degrees (40 degrees anticlockwise) around X axis and
-        10 degrees (clockwise) around Y axis.
-        
-        You can of course rotate it around Z axis with `data-rotate-z` - it has exactly the same effect
-        as `data-rotate` (these two are basically aliases).
-        
-    -->
-    <div id="its-in-3d" class="step" data-x="6200" data-y="4300" data-z="-100" data-rotate-x="-40" data-rotate-y="10" data-scale="2">
-        <p><span class="have">have</span> <span class="you">you</span> <span class="noticed">noticed</span> <span class="its">it's</span> <span class="in">in</span> <b>3D<sup>*</sup></b>?</p>
-        <span class="footnote">* beat that, prezi ;)</span>
     </div>
 
     <!--
